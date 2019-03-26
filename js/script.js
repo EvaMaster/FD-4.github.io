@@ -29,6 +29,7 @@ wrapper.addEventListener('click', (e)=>{
         (arrCheck.length !==0)?chengeDisabled(arrCheck[0]):console.log('массив закончился');
     };
     if(arr.length==5){
+        setTimeout(()=>{
         const maxOccurences = array => Array.from(
             arr.reduce(
                 (map, value) => map.set(
@@ -42,10 +43,6 @@ wrapper.addEventListener('click', (e)=>{
             (item, count) => ({ item, count })
         )
         let x = + maxOccurences(arr).item;
-        resContain.innerText = res[--x];
+        resContain.innerText = res[--x];}, 1100);
         };
 });
-
-
-
-
