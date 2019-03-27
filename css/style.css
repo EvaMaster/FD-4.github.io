@@ -1,31 +1,94 @@
-@keyframes changeDisplay {
-    from{opacity: 1; }
-    to{opacity: 0; }
-}
-
-
-.wrapper{
+.object{
+    flex-direction: column;
     width: 600px;
+    min-height: 300px;
+    background-color: #FBAB7E;
+    background-image: -webkit-linear-gradient(332deg, #FBAB7E 0%, #F7CE68 100%);
+    background-image: -o-linear-gradient(332deg, #FBAB7E 0%, #F7CE68 100%);
+    background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
+    border-radius: 15px;
+    margin: auto;
+}
+.d-flex{
     display: flex;
+}
+.object__header,.object-date{
+    width: 500px;
+    align-self: center;
+}
+.object__header{
+    font-size: 1.8em;
+    font-family:monospace;
+}
+.object-date{
+    justify-content: space-between;
+}
+.date-input_style,.date_submit{
+    outline: none;
+    border:none;
+    border-radius: 3px;
+    text-align: center;
+}
+.date-input_style{
+    outline: none;
+    border:none;
+    border-radius: 3px;
+    text-align: center;
+    height: 25px;
+}
+.date_submit{
+    background-color: #FBAB7E;
+    color:darkred;
+    font-weight: 600;
+    transition: background-color .5s;
+}
+.date_submit:hover{
+    background-color: #CBAB1E;
+}
+.date_submit:active{
+    margin-bottom: -1px;
+    margin-top: 1px;
+    background-color: #CB4B1E;
+}
+.object-result{
     flex-direction: column;
-    margin: 0 auto;
+    margin-top: 20px;
 }
 
-.question{
+.date-close{
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: baseline;
-    
+    justify-content: center;
 }
-
-.result__header,.result__contain{
-    font-size:30px;
+.date-key__item,.date-value__item,.date-close__item{
+    margin: 5px;
+    height: 20px;
 }
-.animation{
-    animation-name: changeDisplay;
-    animation-timing-function: linear;
-    animation-iteration-count: 1;
-    animation-direction: normal;
-    animation-duration: 1s;
+.date-key__item,.date-value__item{
+    padding-left: 10px;
+    border:2px solid #000;
+    border-radius: 4px;
+    background-color: burlywood;
+    min-width: 100px;
+}
+.date-close__item{
+    display: flex;
+    outline: none;
+    border:none;
+    height: 20px;
+    background-color: #FBAB7E;
+    transition: background-color .5s;
+}
+.date-close__item:hover{
+    background-color: #CBAB1E;
+}
+.date-close__item:active{
+    background-color: #CB4B1E;
+}
+.result-contain{
+    width: 510px;
+    display: flex;
+    align-self: center;
+    flex-direction: row;
+    justify-content: space-around;
 }
